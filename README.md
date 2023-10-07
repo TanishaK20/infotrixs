@@ -9,7 +9,7 @@ Currency Converter is a command-line tool built in Java that allows users to man
 - **Add Favorite Currencies:** You can add your favorite currencies to the list for quick access.
 
 - **View Exchange Rates:** Get up-to-date exchange rates for your favorite currencies.
-- 
+  
 - **Update Favorite Currencies:** You can update your favorite currencies .
 
 - **Convert Currency:** Effortlessly convert an amount from one currency to another within your list of favorite currencies.
