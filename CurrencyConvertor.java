@@ -15,7 +15,6 @@ import org.json.JSONObject;
 
 public class CurrencyConvertor {
 
-    static int currencyIndex = 1;
     private static final String FAVORITE_CURRENCIES_FILE = "favorite_currencies.txt";
 
     private static final String API_KEY = "64177821f3e30c8a7e3448402cf76c30";
@@ -202,7 +201,7 @@ public class CurrencyConvertor {
 
         try {
             System.out.println("Your favorite currencies and their exchange rates");
-            int currencyIndex = 1;
+        
 
             for (String sourceCurrency : favoriteCurrencies) {
 
@@ -218,7 +217,7 @@ public class CurrencyConvertor {
                 JSONObject jsonResponse = fetchCurrencyData(apiUrl);
 
                 if (jsonResponse.getBoolean("success")) {
-                    System.out.println(currencyIndex + " " + sourceCurrency);
+                    System.out.println( sourceCurrency);
                     System.out.println("Its exchange rates - ");
 
                     JSONObject quotes = jsonResponse.getJSONObject("quotes");
@@ -233,9 +232,9 @@ public class CurrencyConvertor {
                     System.err.println();
                 }
                  else {
-                    System.out.println(currencyIndex + " " + sourceCurrency + " - " + "not a valid curriency");
+                    System.out.println( sourceCurrency + " - " + "not a valid curriency");
                 }
-                currencyIndex++;
+             
             }
         } catch (Exception e) {
             handleException("An error occurred while fetching currency data.", e);

@@ -1,3 +1,4 @@
-EUR
+
 INR
-USD
+EUR
+GBP
