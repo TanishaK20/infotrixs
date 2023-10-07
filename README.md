@@ -4,6 +4,9 @@ Internship Task -
 
 Currency Converter is a command-line tool built in Java that allows users to manage their favorite currencies, view exchange rates, and convert currency amounts with ease. Whether you're a traveler or a finance enthusiast, this tool simplifies currency operations and makes them more accessible.
 
+## Prerequisites
+- **External JAR dependency for JSON handling**: You'll need an external JAR file for JSON handling. Replace `path/to/external.jar` with the actual path to your external JAR file.
+
 ## Features
 
 - **Add Favorite Currencies:** You can add your favorite currencies to the list for quick access.
@@ -16,9 +19,28 @@ Currency Converter is a command-line tool built in Java that allows users to man
 
 ## Usage
 
-Follow these simple steps to use the Currency Converter:
+After compiling the project, you can use the Currency Converter by running the Java application
+ Here's the general command structure:
 
-- **Add a Currency**:
+ java -cp .:path/to/external.jar CurrencyConverter <command> [args]
+
+ Replace <command> with one of the available commands and [args] with the corresponding arguments
+
+
+Commands :
+
+- `add <currencyCode>`: Add a currency code to your list of favorite currencies.
+- `view`: View your list of favorite currencies.
+- `update <fromCurrency> to <toCurrency>`: Update a favorite currency from one code to another.
+- `convert <amount> <fromCurrency> to <toCurrency>`: Convert an amount from one currency to another.
+- `help`: Display available commands.
+
+Example:
+ one example to use the Currency Converter:
+
+- Add a favorite currency:
+java -cp .:path/to/external.jar CurrencyConverter add USD
+(Replace `path/to/external.jar` with the actual path to your external JAR file.)
 
 
 ## Dependencies
