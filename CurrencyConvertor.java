@@ -86,7 +86,6 @@ public class CurrencyConvertor {
         System.out.println("update <fromCurrency> to <toCurrency>");
         System.out.println("convert <amount> <fromCurrency> to <toCurrency>");
         System.out.println("exchange");
-        System.out.println("help");
     }
 
     private static void loadFavoriteCurrenciesFromFile() {
