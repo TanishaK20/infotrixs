@@ -25,7 +25,7 @@ After compiling the project, you can use the Currency Converter by running the J
  `java -cp .:path/to/external.jar CurrencyConverter <command> [args]`
 
  Replace `path/to/external.jar` with the actual path to your external JAR file.
- Replace <command> with one of the available commands and [args] with the corresponding arguments
+ Replace <command> with one of the available commands and `[args]` with the corresponding arguments
 
 
 Commands :
