@@ -18,6 +18,12 @@ Currency Converter is a command-line tool built in Java that allows users to man
 
 Follow these simple steps to use the Currency Converter:
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/currency-converter.git
+- **Add a Currency**:
+
+
+## Dependencies
+
+This project uses the following external JAR dependencies:
+
+- `json.jar`: A JSON parsing library for handling currency exchange data.
+
