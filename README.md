@@ -5,7 +5,7 @@ Internship Task -
 Currency Converter is a command-line tool built in Java that allows users to manage their favorite currencies, view exchange rates, and convert currency amounts with ease.This tool leverages real-time exchange rate data from the ExchangeRate API and the Conversion API, allowing users to add favorite currencies, view exchange rates, update currency preferences, and perform seamless currency conversions.
 
 ## Prerequisites
-- **External JAR dependency for JSON handling**: You'll need an external JAR file for JSON handling. Replace `path/to/external.jar` with the actual path to your external JAR file.
+- **External JAR dependency for JSON handling**:
 
 ## Features
 
