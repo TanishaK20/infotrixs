@@ -162,7 +162,8 @@ public class CurrencyConvertor {
                 handleException("An error occurred while converting currency.", e);
             }
         } else {
-            System.out.println("Both " + fromCurrency + " and " + toCurrency + " must be in your favourite currencies.");
+            System.out
+                    .println("Both " + fromCurrency + " and " + toCurrency + " must be in your favourite currencies.");
         }
     }
 
@@ -187,18 +188,16 @@ public class CurrencyConvertor {
         }
     }
 
-  
-
     // to view favourite Curriencies
     private static void viewFavoriteCurrencies() {
         if (favoriteCurrencies.isEmpty()) {
-            System.out.println("You haven't added any favorite currencies yet.");
+            System.out.println("You haven't added any favourite currencies yet.");
             return;
         }
 
         try {
-            System.out.println("Your favorite currencies and their exchange rates");
-        
+            System.out.println("Your favourite currencies and their exchange rates");
+            System.out.println();
 
             for (String sourceCurrency : favoriteCurrencies) {
 
@@ -214,7 +213,6 @@ public class CurrencyConvertor {
                 JSONObject jsonResponse = fetchCurrencyData(apiUrl);
 
                 if (jsonResponse.getBoolean("success")) {
-                    System.out.println( sourceCurrency);
                     System.out.println("Its exchange rates - ");
 
                     JSONObject quotes = jsonResponse.getJSONObject("quotes");
@@ -227,18 +225,17 @@ public class CurrencyConvertor {
                         }
                     }
                     System.err.println();
+                } else {
+                    System.out.println(sourceCurrency + " - " + "not a valid curriency");
                 }
-                 else {
-                    System.out.println( sourceCurrency + " - " + "not a valid curriency");
-                }
-             
+
             }
         } catch (Exception e) {
             handleException("An error occurred while fetching currency data.", e);
         }
     }
 
-      // Handle exceptions by printing the message and stack trace
+    // Handle exceptions by printing the message and stack trace
     private static void handleException(String message, Exception e) {
         System.err.println(message);
         e.printStackTrace();
