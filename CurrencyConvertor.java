@@ -9,13 +9,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CurrencyConvertor {
 
-    private static final String FAVORITE_CURRENCIES_FILE = "favorite_currencies.txt";
+    private static final String FAVOURITE_CURRENCIES_FILE = "favorite_currencies.txt";
 
     private static final String API_KEY = "64177821f3e30c8a7e3448402cf76c30";
     private static final String API_URL = "http://api.exchangerate.host";
@@ -85,11 +84,10 @@ public class CurrencyConvertor {
         System.out.println("view");
         System.out.println("update <fromCurrency> to <toCurrency>");
         System.out.println("convert <amount> <fromCurrency> to <toCurrency>");
-        System.out.println("exchange");
     }
 
     private static void loadFavoriteCurrenciesFromFile() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(FAVORITE_CURRENCIES_FILE))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FAVOURITE_CURRENCIES_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 favoriteCurrencies.add(line.trim().toUpperCase());
@@ -100,13 +98,13 @@ public class CurrencyConvertor {
     }
 
     private static void saveFavoriteCurrenciesToFile() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FAVORITE_CURRENCIES_FILE))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FAVOURITE_CURRENCIES_FILE))) {
             for (String currency : favoriteCurrencies) {
                 writer.write(currency);
                 writer.newLine();
             }
         } catch (IOException e) {
-            handleException("An error occurred while saving favorite currencies to file.", e);
+            handleException("An error occurred while saving favourite currencies to file.", e);
         }
     }
 
@@ -114,9 +112,9 @@ public class CurrencyConvertor {
     private static void addFavoriteCurrency(String currencyCode) {
         if (!favoriteCurrencies.contains(currencyCode)) {
             favoriteCurrencies.add(currencyCode);
-            System.out.println("Added " + currencyCode + " to your favorite currencies.");
+            System.out.println("Added " + currencyCode + " to your favourite currencies.");
         } else {
-            System.out.println(currencyCode + " is already in your favorite currencies.");
+            System.out.println(currencyCode + " is already in your favourite currencies.");
         }
     }
 
@@ -124,14 +122,14 @@ public class CurrencyConvertor {
     private static void updateFavoriteCurrency(String fromCurrency, String toCurrency) {
         if (favoriteCurrencies.contains(fromCurrency)) {
             if (favoriteCurrencies.contains(toCurrency)) {
-                System.out.println(toCurrency + " is already in your favorite currencies.");
+                System.out.println(toCurrency + " is already in your favourite currencies.");
             } else {
                 favoriteCurrencies.remove(fromCurrency);
                 favoriteCurrencies.add(toCurrency);
-                System.out.println("Updated favorite currency from " + fromCurrency + " to " + toCurrency);
+                System.out.println("Updated favourite currency from " + fromCurrency + " to " + toCurrency);
             }
         } else {
-            System.out.println(fromCurrency + " is not in your favorite currencies.");
+            System.out.println(fromCurrency + " is not in your favourite currencies.");
         }
     }
 
@@ -164,7 +162,7 @@ public class CurrencyConvertor {
                 handleException("An error occurred while converting currency.", e);
             }
         } else {
-            System.out.println("Both " + fromCurrency + " and " + toCurrency + " must be in your favorite currencies.");
+            System.out.println("Both " + fromCurrency + " and " + toCurrency + " must be in your favourite currencies.");
         }
     }
 
